@@ -1,24 +1,25 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "tringuyenduc2903/giaohangtietkiem-laravel",
+    "description": "GiaoHangTietKiem (GHTK) SDK for Laravel Framework",
     "keywords": [
-        ":vendor_name",
+        "Nguyễn Đức Trí",
         "laravel",
-        ":package_slug"
+        "giaohangtietkiem-laravel"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/tringuyenduc2903/giaohangtietkiem-laravel",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Nguyễn Đức Trí",
+            "email": "nguyenductri2k3@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.2",
-        "spatie/laravel-package-tools": "^1.16",
-        "illuminate/contracts": "^10.0||^11.0"
+        "guzzlehttp/guzzle": "^7.9",
+        "illuminate/contracts": "^10.0||^11.0",
+        "spatie/laravel-package-tools": "^1.16"
     },
     "require-dev": {
         "laravel/pint": "^1.14",
@@ -35,13 +36,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "TriNguyenDuc\\GiaoHangTietKiem\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
+            "TriNguyenDuc\\GiaoHangTietKiem\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -73,10 +73,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "TriNguyenDuc\\GiaoHangTietKiem\\GiaoHangTietKiemServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "GiaoHangTietKiem": "TriNguyenDuc\\GiaoHangTietKiem\\Facades\\GiaoHangTietKiem"
             }
         }
     },
