@@ -4,6 +4,9 @@
     "keywords": [
         "Nguyễn Đức Trí",
         "laravel",
+        "giao hang tiet kiem",
+        "giaohangtietkiem",
+        "ghtk",
         "giaohangtietkiem-laravel"
     ],
     "homepage": "https://github.com/tringuyenduc2903/giaohangtietkiem-laravel",
@@ -16,15 +19,16 @@
         }
     ],
     "require": {
-        "php": "^8.2",
         "guzzlehttp/guzzle": "^7.9",
         "illuminate/contracts": "^10.0||^11.0",
+        "php": "^8.2",
         "spatie/laravel-package-tools": "^1.16"
     },
     "require-dev": {
+        "buihuycuong/vnfaker": "dev-master",
+        "larastan/larastan": "^2.9",
         "laravel/pint": "^1.14",
         "nunomaduro/collision": "^8.1.1||^7.10.0",
-        "larastan/larastan": "^2.9",
         "orchestra/testbench": "^9.0.0||^8.22.0",
         "pestphp/pest": "^2.34",
         "pestphp/pest-plugin-arch": "^2.7",
