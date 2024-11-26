@@ -387,6 +387,68 @@ array:21 [
 "ĐÃ GỬI YÊU CẦU HỦY ĐƠN HÀNG S22749126.SGP39-J31.1822654513"
 ```
 
+### #6 [Get pick addresses](https://docs.giaohangtietkiem.vn/en/docs/submit-order/api-get-pick-addresses)
+
+**The API returns a list of pickup addresses that have been configured in the system through GHTK's Customer Platform.**
+
+**Syntax**
+
+```php
+GiaoHangTietKiem::getPickAddresses();
+```
+
+**Result**
+
+```php
+array:1 [
+  0 => array:4 [
+    "pick_address_id" => "18227226"
+    "address" => "Số 8, Xã Đông Mỹ, Thanh Trì, Hà Nội"
+    "pick_tel" => "0982213854"
+    "pick_name" => "Nguyễn Đức Trí"
+  ]
+]
+```
+
+### #7 [To get the list of level 4 addresses](https://docs.giaohangtietkiem.vn/en/docs/submit-order/api-get-specific-addresses)
+
+**API to get the list of level 4 addresses (hamlets/villages/subdivisions) within a street/ward/commune. For some
+addresses, this information is mandatory and must be included in the order submission API.**
+
+**Syntax**
+
+```php
+GiaoHangTietKiem::getListLevelAddresses([
+    'address' => $address,
+    'province' => $province,
+    'district' => $district,
+    'ward_street' => $ward_street,
+]);
+```
+
+**Example**
+
+```php
+GiaoHangTietKiem::getListLevelAddresses([
+    'province' => 'Hà nội',
+    'district' => 'Quận Ba Đình',
+    'ward_street' => 'Đội Cấn',
+]);
+```
+
+**Result**
+
+```php
+array:6 [
+  0 => "Vinapaco Building"
+  1 => "IIG"
+  2 => "126 Đội Cấn"
+  3 => "Trường THCS Thống Nhất"
+  4 => "Đường Đội Cấn"
+  5 => "Khác"
+]
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.

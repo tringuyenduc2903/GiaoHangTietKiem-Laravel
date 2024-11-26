@@ -4,7 +4,6 @@ namespace TriNguyenDuc\GiaoHangTietKiem\GiaoHangTietKiem;
 
 use Exception;
 use Illuminate\Http\Client\ConnectionException;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
 trait Order
@@ -40,8 +39,7 @@ trait Order
     ): array {
         $response = $this
             ->getRequest($partner_code, $api_url, $token)
-            ->withQueryParameters($data)
-            ->get('services/shipment/fee');
+            ->get('services/shipment/fee', $data);
 
         $this->handleFailedResponse($response);
 
@@ -73,18 +71,14 @@ trait Order
      */
     public function printLabel(
         int $tracking_order,
-        ?array $data = null,
+        ?array $data = [],
         ?int $partner_code = null,
         ?string $api_url = null,
         ?string $token = null
     ): string {
-        $response = Http::baseUrl($api_url ?: config('giaohangtietkiem-laravel.api_url'))
-            ->withHeaders([
-                'Token' => $token ?: config('giaohangtietkiem-laravel.token'),
-                'X-Client-Source' => $partner_code ?: config('giaohangtietkiem-laravel.partner_code'),
-            ])
-            ->withQueryParameters($data ?: [])
-            ->get("services/label/$tracking_order");
+        $response = $this
+            ->getRequest($partner_code, $api_url, $token)
+            ->get("services/label/$tracking_order", $data);
 
         if ($response->failed()) {
             Log::debug(

@@ -7,10 +7,12 @@ use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
+use TriNguyenDuc\GiaoHangTietKiem\GiaoHangTietKiem\Address;
 use TriNguyenDuc\GiaoHangTietKiem\GiaoHangTietKiem\Order;
 
 class GiaoHangTietKiem
 {
+    use Address;
     use Order;
 
     protected function getRequest(
