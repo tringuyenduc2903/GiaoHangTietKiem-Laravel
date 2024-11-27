@@ -480,6 +480,66 @@ array:3 [
 ]
 ```
 
+### #9 [Create account](https://docs.giaohangtietkiem.vn/en/docs/submit-order/api-b2c-create-account)
+
+**Syntax**
+
+```php
+\GiaoHangTietKiem::createAccount([
+    'name' => $name,
+    'first_address' => $first_address,
+    'province' => $province,
+    'district' => $district,
+    'tel' => $tel,
+    'email' => $email,
+]);
+```
+
+**Example**
+
+```php
+\GiaoHangTietKiem::createAccount([
+    'name' => 'shop test',
+    'first_address' => 'ngõ 2, Phan Bá Vành, Cầu Diễn',
+    'province' => 'Hà Nội',
+    'district' => 'Bắc Từ Liêm',
+    'tel' => '01234555666',
+    'email' => 'shoptest@email.com',
+]);
+```
+
+**Result**
+
+```php
+Exception: Tài khoản của bạn không có quyền tạo tài khoản mới trên GHTK
+```
+
+### #10 [Registered account](https://docs.giaohangtietkiem.vn/en/docs/submit-order/api-b2c-account-created-before)
+
+**Syntax**
+
+```php
+\GiaoHangTietKiem::registeredAccount([
+    'email' => $email,
+    'password' => $password,
+]);
+```
+
+**Example**
+
+```php
+\GiaoHangTietKiem::registeredAccount([
+    'email' => 'shoptest@email.com',
+    'password' => '1S@fF#K2',
+]);
+```
+
+**Result**
+
+```php
+Exception: Tài khoản của bạn không có quyền sử dụng API này
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.

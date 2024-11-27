@@ -8,12 +8,14 @@ use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use TriNguyenDuc\GiaoHangTietKiem\GiaoHangTietKiem\Address;
+use TriNguyenDuc\GiaoHangTietKiem\GiaoHangTietKiem\B2c;
 use TriNguyenDuc\GiaoHangTietKiem\GiaoHangTietKiem\Order;
 use TriNguyenDuc\GiaoHangTietKiem\GiaoHangTietKiem\Warehouse;
 
 class GiaoHangTietKiem
 {
     use Address;
+    use B2c;
     use Order;
     use Warehouse;
 
