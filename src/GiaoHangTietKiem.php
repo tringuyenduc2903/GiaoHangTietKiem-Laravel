@@ -9,11 +9,13 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use TriNguyenDuc\GiaoHangTietKiem\GiaoHangTietKiem\Address;
 use TriNguyenDuc\GiaoHangTietKiem\GiaoHangTietKiem\Order;
+use TriNguyenDuc\GiaoHangTietKiem\GiaoHangTietKiem\Warehouse;
 
 class GiaoHangTietKiem
 {
     use Address;
     use Order;
+    use Warehouse;
 
     protected function getRequest(
         ?int $partner_code,

@@ -394,7 +394,7 @@ array:21 [
 **Syntax**
 
 ```php
-GiaoHangTietKiem::getPickAddresses();
+\GiaoHangTietKiem::getPickAddresses();
 ```
 
 **Result**
@@ -418,7 +418,7 @@ addresses, this information is mandatory and must be included in the order submi
 **Syntax**
 
 ```php
-GiaoHangTietKiem::getListLevelAddresses([
+\GiaoHangTietKiem::getListLevelAddresses([
     'address' => $address,
     'province' => $province,
     'district' => $district,
@@ -429,7 +429,7 @@ GiaoHangTietKiem::getListLevelAddresses([
 **Example**
 
 ```php
-GiaoHangTietKiem::getListLevelAddresses([
+\GiaoHangTietKiem::getListLevelAddresses([
     'province' => 'Hà nội',
     'district' => 'Quận Ba Đình',
     'ward_street' => 'Đội Cấn',
@@ -446,6 +446,37 @@ array:6 [
   3 => "Trường THCS Thống Nhất"
   4 => "Đường Đội Cấn"
   5 => "Khác"
+]
+```
+
+### #8 [To retrieve the product list](https://docs.giaohangtietkiem.vn/en/docs/submit-order/api-get-product)
+
+**The API returns a list of products (and their corresponding IDs) that match the search query.**
+**The product ID will need to be included in the order submission API for certain specific workflows.**
+
+**Syntax**
+
+```php
+\GiaoHangTietKiem::toRetrieveProductList($term);
+```
+
+**Example**
+
+```php
+\GiaoHangTietKiem::toRetrieveProductList('laptop');
+```
+
+**Result**
+
+```php
+array:3 [
+  0 => array:4 [
+    "product_code" => "237233673"
+    "full_name" => "laptop asus"
+    "cost" => 0
+    "weight" => 0
+  ]
+  ...
 ]
 ```
 
