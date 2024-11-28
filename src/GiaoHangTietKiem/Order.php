@@ -51,7 +51,7 @@ trait Order
      * @throws Exception
      */
     public function getOrderStatus(
-        int $tracking_order,
+        int|string $tracking_order,
         ?int $partner_code = null,
         ?string $api_url = null,
         ?string $token = null
@@ -70,7 +70,7 @@ trait Order
      * @throws Exception
      */
     public function printLabel(
-        int $tracking_order,
+        int|string $tracking_order,
         ?array $data = [],
         ?int $partner_code = null,
         ?string $api_url = null,
@@ -97,7 +97,7 @@ trait Order
      * @throws Exception
      */
     public function orderCancellation(
-        int $tracking_order,
+        int|string $tracking_order,
         ?int $partner_code = null,
         ?string $api_url = null,
         ?string $token = null
