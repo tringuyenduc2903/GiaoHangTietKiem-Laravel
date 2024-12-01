@@ -39,7 +39,7 @@ return [
 
 ## Usage
 
-### #1 [Submit Order API](https://docs.giaohangtietkiem.vn/en/docs/submit-order/submit-order-express)
+### #1 [Submit order](https://docs.giaohangtietkiem.vn/en/docs/submit-order/submit-order-express)
 
 **This API is to submit an order to GHTK system.**
 
@@ -181,7 +181,7 @@ array:17 [
 ]
 ```
 
-### #2 [Calculate Shipping Fee API](https://docs.giaohangtietkiem.vn/en/docs/submit-order/calculate-shipping-fee)
+### #2 [Calculate shipping fee](https://docs.giaohangtietkiem.vn/en/docs/submit-order/calculate-shipping-fee)
 
 **This API provides the shipping fee based on given pickup & delivery address and the package weight.**
 
@@ -277,7 +277,7 @@ array:14 [
 ]
 ```
 
-### #3 [Get Order Status API](https://docs.giaohangtietkiem.vn/en/docs/submit-order/tracking-status)
+### #3 [Get order status](https://docs.giaohangtietkiem.vn/en/docs/submit-order/tracking-status)
 
 **This API provides the current status of the order.**
 
@@ -336,7 +336,7 @@ array:21 [
 ]
 ```
 
-### #4 [Print Label API](https://docs.giaohangtietkiem.vn/en/docs/submit-order/print-label)
+### #4 [Print label](https://docs.giaohangtietkiem.vn/en/docs/submit-order/print-label)
 
 **This API provides printing label for the package order in PDF format.**
 
@@ -365,7 +365,7 @@ array:21 [
 
 ![Sample for A5 portrait](https://docs.giaohangtietkiem.vn/img/docs/a5_portrait.png)
 
-### #5 [Order Cancellation API](https://docs.giaohangtietkiem.vn/en/docs/submit-order/api-cancel-order)
+### #5 [Order cancellation](https://docs.giaohangtietkiem.vn/en/docs/submit-order/api-cancel-order)
 
 **API for canceling an order already pushed to GHTK system.**
 
