@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Log;
 use TriNguyenDuc\GiaoHangTietKiem\GiaoHangTietKiem\Address;
 use TriNguyenDuc\GiaoHangTietKiem\GiaoHangTietKiem\B2c;
 use TriNguyenDuc\GiaoHangTietKiem\GiaoHangTietKiem\Order;
+use TriNguyenDuc\GiaoHangTietKiem\GiaoHangTietKiem\Utility;
 use TriNguyenDuc\GiaoHangTietKiem\GiaoHangTietKiem\Warehouse;
 
 class GiaoHangTietKiem
@@ -17,6 +18,7 @@ class GiaoHangTietKiem
     use Address;
     use B2c;
     use Order;
+    use Utility;
     use Warehouse;
 
     protected function getRequest(
@@ -29,7 +31,7 @@ class GiaoHangTietKiem
                 'Token' => $token ?: config('giaohangtietkiem-laravel.token'),
                 'X-Client-Source' => $partner_code ?: config('giaohangtietkiem-laravel.partner_code'),
             ])
-            ->accept('application/json');
+            ->acceptJson();
     }
 
     /**

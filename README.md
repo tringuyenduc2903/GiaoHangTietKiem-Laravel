@@ -540,6 +540,26 @@ Exception: Tài khoản của bạn không có quyền tạo tài khoản mới 
 Exception: Tài khoản của bạn không có quyền sử dụng API này
 ```
 
+### #11 Get Tracking Url
+
+**Syntax**
+
+```php
+\GiaoHangTietKiem::getTrackingUrl($tracking_order);
+```
+
+**Example**
+
+```php
+\GiaoHangTietKiem::getTrackingUrl('1375835526');
+```
+
+**Result**
+
+```php
+"https://i.ghtk.vn//1375835526"
+```
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.

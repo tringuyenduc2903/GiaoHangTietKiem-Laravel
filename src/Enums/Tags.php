@@ -6,6 +6,23 @@ use Rexlabs\Enum\Enum;
 
 /**
  * The Tags enum.
+ *
+ * @method static self FRAGILE()
+ * @method static self HIGH_VALUE_ITEMS()
+ * @method static self AGRICULTURAL_PRODUCTS()
+ * @method static self ALLOWED_TO_INSPECT_THE_PRODUCT()
+ * @method static self CROSSCHECK()
+ * @method static self CALL_THE_SHOP()
+ * @method static self CUSTOMER_SELECTS_PRODUCTS()
+ * @method static self PRODUCT_RETURN()
+ * @method static self FEE()
+ * @method static self WHOLE_BOX()
+ * @method static self MAIL_AND_DOCUMENT()
+ * @method static self FRESH_FOOD()
+ * @method static self SMALL_GOODS()
+ * @method static self ITEMS_REQUIRING_PROPER_ORIENTATION()
+ * @method static self LIQUID_GOODS()
+ * @method static self PLANT_GOODS()
  */
 class Tags extends Enum
 {
